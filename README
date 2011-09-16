@@ -1,0 +1,12 @@
++---------------+
+| About the app |
++---------------+
+ScreenTxt_Z. is a web application displays text across multiple displays.  It is designed to run on Google App Engine.  Pretty much you can go to [app url]/disp#[number] for each letter and [app url]/settings for the master control.
+
++----------------+
+| About versions |
++----------------+
+There are currently three versions.  They are in folders because I started coding this before I started using git, so that was my substitute for branches.  Version one was written quickly and badly, and as a result it uses constant polling instead of the Channel API and does not let you set too many things.  Version two uses the Channel API, but lists the displays as a comma-separated list in the datastore instead of its own table.  Version three is the latest and best.
+
+
+Written by Zachary “Gamer_Z.” Yaro.
