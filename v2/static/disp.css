@@ -1,0 +1,66 @@
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10pt;
+}
+button {
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, white), color-stop(100%, lightGray));
+	background-image:-webkit-linear-gradient(white, lightGray);
+	background-image:   -moz-linear-gradient(white, lightGray);
+	background-image:    -ms-linear-gradient(white, lightGray);
+	background-image:     -o-linear-gradient(white, lightGray);
+	background-image:        linear-gradient(white, lightGray);
+	
+	border-style:outset;
+	border-width:1px;
+	border-color:#DDD;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+	        border-radius:3px;
+	
+	color:black;
+	text-shadow:0px 1px 0px rgba(255,255,255,0.75);
+	
+	min-width:8px;
+	min-height:8px;
+	padding:2px 6px; /* top/bottom, right/left */
+	
+	cursor:pointer;
+}
+button:hover {
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, white), color-stop(100%, lightGray));
+	background-image:-webkit-linear-gradient(white, lightGray);
+	background-image:   -moz-linear-gradient(white, lightGray);
+	background-image:    -ms-linear-gradient(white, lightGray);
+	background-image:     -o-linear-gradient(white, lightGray);
+	background-image:        linear-gradient(white, lightGray);
+	border-style:solid;
+	border-color:#888;
+}
+button:active {
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, lightGray), color-stop(100%, white));
+	background-image:-webkit-linear-gradient(lightGray, white);
+	background-image:   -moz-linear-gradient(lightGray, white);
+	background-image:    -ms-linear-gradient(lightGray, white);
+	background-image:     -o-linear-gradient(lightGray, white);
+	background-image:        linear-gradient(lightGray, white);
+	border-style:inset;
+	border-color:#DDD;
+	
+	-webkit-box-shadow:none;
+	   -moz-box-shadow:none;
+	        box-shadow:none;
+}
+
+#dispNumContainer {
+	position:fixed;
+	right:0px;
+	top:0px;
+}
+#txt {
+	position:fixed;
+	top:4px;
+	bottom:4px;
+	left:0px;
+	right:0px;
+	text-align:center;
+}

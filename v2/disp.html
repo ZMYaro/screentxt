@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ScreenTxt_Z.</title>
+		<link rel="stylesheet" type="text/css" href="/static/disp.css"/>
+	</head>
+	<body onload="init();" onresize="document.getElementById('txt').style.fontSize = window.innerHeight + 'px';">
+		<div id="txt">
+		</div>
+		<span id="dispNumContainer">
+				Display number:
+				<button onclick="setDispNum();" id="dispNumBtn"></button>
+		</span>
+		<script type="text/javascript" src="/_ah/channel/jsapi"></script>
+		<script type="text/javascript">
+			var channel = new goog.appengine.Channel("{{ token }}");
+		</script>
+		<script type="text/javascript" src="/static/disp.js"></script>
+	</body>
+</html>

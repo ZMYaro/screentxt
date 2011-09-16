@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ScreenTxt_Z.</title>
+		<link rel="shortcut-icon" type="image/x-icon" href="/static/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="/static/disp.css"/>
+	</head>
+	<body style="background-color:{{ bgcolor }};" onload="init();" onresize="document.getElementById('txt').style.fontSize = window.innerHeight + 'px';">
+		<div id="txt" style="color:{{ color }};font-family:{{ font }}"></div>
+		<span id="dispNumContainer">
+				Display number:
+				<button onclick="setDispNum();" id="dispNumBtn" style="background-color:rgba(192,192,192,0.5);opacity:0.5;"></button>
+		</span>
+		<script type="text/javascript" src="/_ah/channel/jsapi"></script>
+		<script type="text/javascript">
+			var channel = new goog.appengine.Channel("{{ token }}");
+			
+			var font = "{{ font }}";
+			var color = "{{ color }}";
+			var bgcolor = "{{ bgcolor }}";
+		</script>
+		<script type="text/javascript" src="/static/disp.js"></script>
+	</body>
+</html>

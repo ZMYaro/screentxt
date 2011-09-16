@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ScreenTxt_Z.</title>
+		<link rel="stylesheet" type="text/css" href="/static/settings.css"/>
+	</head>
+	<body onload="init();">
+		<div id="settings">
+			<span style="float:right;">{{ useremail }}</span>
+			<h1>ScreenTxt_Z. Settings</h1>
+			<br/>
+			<select id="fontSetting" onchange="set('font', value);">
+				<option value="sans-serif">Sans-Serif (like Arial or Helvetica)</option>
+				<option value="serif">Serif (like Times New Roman)</option>
+				<option value="monospace">Monospace (like Courier or Consolas)</option>
+			</select>
+ 			<img src="/static/check.gif" alt="" id="fontLoadingIcon"/> 
+			<br/>
+			<br/>
+			Your message:
+			<input type="text" id="msg" onchange="set('msg', value);" onkeyup="set('msg', value);"/>
+			<img src="/static/loading.gif" alt="" id="msgLoadingIcon"/>
+		</div>
+		<script type="text/javascript" src="/_ah/channel/jsapi"></script>
+		<script type="text/javascript">
+			document.getElementById("fontSetting").value = "{{ font }}";
+		</script>
+		<script type="text/javascript" src="/static/settings.js"></script>
+	</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ScreenTxt_Z.</title>
+		<link rel="shortcut-icon" type="image/x-icon" href="/static/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="/static/settings.css"/>
+	</head>
+	<body onload="init();">
+		<div id="settings">
+			<span style="float:right;">{{ useremail }}</span>
+			<h1>ScreenTxt_Z. Settings</h1>
+			<br/>
+			<table>
+				<tr>
+					<td style="text-align:right;">
+						Font:
+					</td>
+					<td>
+						<select id="fontSetting" onchange="set('font', value);">
+							<option value="sans-serif">Sans-Serif (like Arial or Helvetica)</option>
+							<option value="serif">Serif (like Times New Roman)</option>
+							<option value="monospace">Monospace (like Courier or Consolas)</option>
+						</select>
+			 			<img src="/static/check.gif" alt="" id="fontLoadingIcon"/>
+			 		</td>
+		 		</tr>
+				<tr>
+					<td style="text-align:right;">
+						Text color:
+					</td>
+					<td>
+						<select id="colorSetting" onchange="set('color', value);">
+							<option value="red">red</option>
+							<option value="orange">orange</option>
+							<option value="yellow">yellow</option>
+							<option value="lime">lime</option>
+							<option value="green">green</option>
+							<option value="cyan">cyan</option>
+							<option value="lightBlue">lightBlue</option>
+							<option value="blue">blue</option>
+							<option value="indigo">indigo</option>
+							<option value="purple">purple</option>
+							<option value="pink">pink</option>
+							<option value="brown">brown</option>
+							<option value="black">black</option>
+							<option value="white">white</option>
+						</select>
+			 			<img src="/static/check.gif" alt="" id="colorLoadingIcon"/>
+			 		</td>
+		 		</tr>
+				<tr>
+					<td style="text-align:right;">
+						Background color:
+					</td>
+					<td>
+						<select id="bgcolorSetting" onchange="set('bgcolor', value);">
+							<option value="red">red</option>
+							<option value="orange">orange</option>
+							<option value="yellow">yellow</option>
+							<option value="lime">lime</option>
+							<option value="green">green</option>
+							<option value="cyan">cyan</option>
+							<option value="lightBlue">lightBlue</option>
+							<option value="blue">blue</option>
+							<option value="indigo">indigo</option>
+							<option value="purple">purple</option>
+							<option value="pink">pink</option>
+							<option value="brown">brown</option>
+							<option value="black">black</option>
+							<option value="white">white</option>
+						</select>
+			 			<img src="/static/check.gif" alt="" id="bgcolorLoadingIcon"/>
+		 			</td>
+	 			</tr>
+	 			<tr>
+	 				<td colpan="2">
+	 					&nbsp;
+	 				</td>
+	 			</tr>
+	 			<tr>
+	 				<td style="text-align:right;">
+						Your message:
+					</td>
+					<td>
+						<input type="text" id="msg" value="{{ msg }}" onchange="set('msg', value);" onkeyup="set('msg', value);"/>
+						<img src="/static/check.gif" alt="" id="msgLoadingIcon"/>
+					</td>
+				</tr>
+	 			<tr>
+	 				<td colpan="2">
+	 					&nbsp;
+	 				</td>
+	 			</tr>
+	 			<tr>
+	 				<td></td>
+					<td>
+						<button onclick="setEverything();">Set ALL THE THINGS!</button>
+					</td>
+				</tr>
+			</table>
+			<br/>
+			<br/>
+			<table>
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td style="text-align:right;">
+									# of displays:
+								</td>
+								<td>
+									<input type="number" value="1" min="1" max="50" style="width:2.5em;" id="dispSpawnDisps"/>
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:right;">
+									# of rows:
+								</td>
+								<td>
+									<input type="number" value="1" min="1" max="20" style="width:2.5em;" id="dispSpawnRows"/>
+								</td>
+							</tr>
+								<td style="text-align:right;">
+									start at #:
+								</td>
+								<td>
+									<input type="number" value="0" min="0" max="20" style="width:2.5em;" id="dispSpawnStart"/>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>
+									<button onclick="spawnDisps();">Spawn displays</button>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<button onclick="closeDisps();">Close displays</button>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+<!--			# of displays: <input type="number" value="1" min="1" max="50" style="width:2.5em;" id="dispSpawnDisps"/> | # of rows: <input type="number" value="1" min="1" max="20" style="width:2.5em;" id="dispSpawnRows"/> | start at #: <input type="number" value="0" min="0" max="20" style="width:2.5em;" id="dispSpawnStart"/> | <button onclick="spawnDisps();">Spawn displays</button> | <button onclick="closeDisps();">Close displays</button> -->
+			<br/>
+			<br/>
+			<div id="serverResponse" style="white-space:pre;"></div>
+		</div>
+		<script type="text/javascript" src="/_ah/channel/jsapi"></script>
+		<script type="text/javascript">
+			document.getElementById("fontSetting").value = "{{ font }}";
+			document.getElementById("colorSetting").value = "{{ color }}";
+			document.getElementById("bgcolorSetting").value = "{{ bgcolor }}";
+		</script>
+		<script type="text/javascript" src="/static/settings.js"></script>
+	</body>
+</html>
