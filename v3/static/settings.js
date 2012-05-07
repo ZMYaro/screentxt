@@ -7,7 +7,7 @@ function init() {
 }
 
 function set(setting, newVal) {
-	newVal = escape(newVal);
+	newVal = encodeURIComponent(newVal);
 //	console.log("1: " + newVal);
 	newVal = newVal.replace("/", "%2F");
 //	console.log("2: " + newVal);

@@ -82,7 +82,7 @@
 						Your message:
 					</td>
 					<td>
-						<input type="text" id="msg" value="{{ msg }}" onchange="set('msg', value);" onkeyup="set('msg', value);"/>
+						<input type="text" id="msg" value="{{ msg }}" oninput="set('msg', value);"/>
 						<img src="/static/check.gif" alt="" id="msgLoadingIcon"/>
 					</td>
 				</tr>

@@ -15,9 +15,9 @@
 		<script type="text/javascript">
 			var channel = new goog.appengine.Channel("{{ token }}");
 			
-			var font = "{{ font }}";
-			var color = "{{ color }}";
-			var bgcolor = "{{ bgcolor }}";
+			var msg = "{{ msg }}";
+			
+			var hasInnerText = !!document.body.innerText;
 		</script>
 		<script type="text/javascript" src="/static/disp.js"></script>
 	</body>
